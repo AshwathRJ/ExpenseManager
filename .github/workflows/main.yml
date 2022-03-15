@@ -15,9 +15,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-#      - name: Run Lint
-#        run: echo Run Lint
-
       - name: Run Lint
         run: ./gradlew lintDebug
 
@@ -34,8 +31,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-#      - name: Run tests
-#        run: echo Run unit tests
       - name: Run tests
         run: ./gradlew test
 
@@ -52,8 +47,6 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
 
-#      - name: Run espresso tests
-#        run: echo Run espresso tests
       - name: Run espresso tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -113,10 +106,7 @@ jobs:
     name: Distribut For Alpha Testing
     runs-on: ubuntu-latest
     steps:
-#       - name: Download latest artifact
-#         uses: actions/download-artifact@v2
-#         with:
-#           name: expense-manager.apk
+
       - uses: actions/checkout@v1
       - name: set up JDK 1.8
         uses: actions/setup-java@v1
@@ -134,4 +124,4 @@ jobs:
           group: AlphaTesters
           file: app/build/outputs/apk/release/expense-manager.apk
           notifyTesters: true
-          debug: true
+          debug: false
