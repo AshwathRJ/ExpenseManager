@@ -121,7 +121,7 @@ jobs:
       - name: Upload to app center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: ajitsing/Expense-Manager
+          appName: joshiashwath3/Expense-Manager
           token:  ${{ secrets.APP_CENTER_TOKEN }}
           group: AlphaTesters
           file: expense-manager.apk
