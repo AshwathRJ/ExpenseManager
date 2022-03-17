@@ -129,6 +129,6 @@ jobs:
           appName: AshwathRJ/ExpenseManager
           token:  ${{ secrets.APP_CENTER_TOKEN }}
           group: AlphaTesters
-          file: app/build/outputs/apk/release/expense-manager.apk
+          file: expense-manager.apk
           notifyTesters: true
           debug: false
