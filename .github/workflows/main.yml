@@ -121,7 +121,7 @@ jobs:
          appId: ${{secrets.FIREBASE_APP_ID}}
          token: ${{secrets.FIREBASE_TOKEN}}
          groups: testers
-         file: app/build/outputs/apk/release/app-release.apk
+         file: app/build/outputs/apk/release/expense-manager.apk
       
 #       - name: Upload to app center
 #         uses: wzieba/AppCenter-Github-Action@v1
